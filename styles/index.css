@@ -1,0 +1,117 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* font-family: "Fraunces", serif; */
+/* font-family: "Montserrat", sans-serif; */
+
+/* font-family: 'Fraunces', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+body {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Cream);
+}
+
+.product__container {
+  display: grid;
+  background-color: var(--White);
+  border-radius: 8px;
+  margin: 10px;
+  max-width: 400px;
+}
+
+.product__image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product__information {
+  padding: 20px;
+}
+
+.product-legend {
+  font-family: "Montserrat", serif;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.product-title {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  color: var(--Very-dark-blue);
+}
+
+.product-description {
+  color: var(--Dark-grayish-blue);
+  font-size: 0.9rem;
+}
+
+.product__prices {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product__price {
+  font-size: 2rem;
+  color: var(--Dark-cyan);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+.product__price-before {
+  align-self: center;
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+
+.product__button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "Montserrat", serif;
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-weight: 500;
+}
+
+.product__button:hover {
+  --Dark-cyan-hover: hsl(158, 36%, 20%);
+  background-color: var(--Dark-cyan-hover);
+}
+
+/* media */
+
+@media (min-width: 768px) {
+  .product__container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 768px;
+  }
+
+  .product-title {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--Very-dark-blue);
+  }
+
+  .product-description {
+    font-size: 1.5rem;
+    color: var(--Dark-grayish-blue);
+  }
+}
